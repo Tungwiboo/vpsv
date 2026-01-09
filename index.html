@@ -937,7 +937,7 @@
                 ? `<a href="${CONFIG.authorLink}" target="_blank">${CONFIG.authorName}</a>`
                 : `<a>${CONFIG.authorName}</a>`;
             document.getElementById('footerAuthor').innerHTML = `Made with 💔 by ${authorLink}`;
-            document.getElementById('footerText').textContent = CONFIG.footerText;
+            document.getElementById('footerText').innerHTML = CONFIG.footerText;
             document.getElementById('disclaimer').innerHTML = CONFIG.disclaimer;
         }
 
