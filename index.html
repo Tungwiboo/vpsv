@@ -764,24 +764,19 @@
         // ║                    🎨 CẤU HÌNH CÁ NHÂN HÓA - CHỈNH SỬA Ở ĐÂY!               ║
         // ║         Chỉ cần thay đổi nội dung trong biến CONFIG bên dưới               ║
         // ╚════════════════════════════════════════════════════════════════════════════╝
+
         
         const CONFIG = {
-            // ═══════════════════════════════════════════════════════════════════
             // 📌 THÔNG TIN CƠ BẢN
-            // ═══════════════════════════════════════════════════════════════════
-            pageTitle: "Dự Án Nuôi Tôi 🍜",              // Tiêu đề trang (hiển thị trên tab)
+            pageTitle: "Dự Án Nuôi Tôi 🍜",
             
-            // ═══════════════════════════════════════════════════════════════════
             // 👤 THÔNG TIN CÁ NHÂN
-            // ═══════════════════════════════════════════════════════════════════
-            avatar: "🧑‍💻",                         // Avatar (emoji hoặc link ảnh)
-            statusBadge: "😢",                     // Badge trạng thái bên cạnh avatar
-            authorName: "Tôi",                    // Tên hiển thị ở footer
-            authorLink: "",                       // Link tới profile (để trống nếu không có)
+            avatar: "🧑‍💻",
+            statusBadge: "😢",
+            authorName: "Tôi",
+            authorLink: "",
             
-            // ═══════════════════════════════════════════════════════════════════
             // 📖 CÂU CHUYỆN CỦA BẠN
-            // ═══════════════════════════════════════════════════════════════════
             storyTitle: "📖 Giới Thiệu ",
             storyContent: `
                 <p>Xin chào, tôi là <span class="highlight">Sinh Viên</span> đang loay hoay giữa cuộc sống, học đến 3h sáng, ôn đến <span class="highlight">bạc đầu</span>, và kiểm tra đến <span class="highlight">mờ mắt</span>. Tôi yêu kiến thức thì kiến thức cũng phải yêu tôi , nếu không tôi cũng xin chấm dứt sự đau khổ này! 💔</p>
@@ -794,25 +789,20 @@
                 </ul>
             `,
             
-            // ═══════════════════════════════════════════════════════════════════
-            // 📢 MARQUEE - DÒNG CHỮ CHẠY
-            // ═══════════════════════════════════════════════════════════════════
+            // 📢 MARQUEE - DÒNG CHỮ CHẠY (ĐÃ SỬA LỖI)
             marqueeItems: [
                 "🔥 BREAKING: Cậu bé sinh viên nghèo này thường bỏ ăn sáng để đủ kinh phí khởi tạo dự án này!",
                 "🎮 Fun fact: 99% donate sẽ đi vào game và phở (mostly phở)",
                 "📊 Thống kê: 69 người xem, 67 người cười, 0 ai donate",
                 "💵 Đang cần gấp tiền để mua tài liệu ",
-                "🏆 TOP DONATE: Tùng Wiboo - 500k | Lời nhắn: \"Hãy Lên  <span class="highlight">NBTUNG.SHOP</span> Ủng Hộ !\"",
+                // Dòng dưới đây đã được sửa dấu ngoặc của class='highlight'
+                "🏆 TOP DONATE: Tùng Wiboo - 500k | Lời nhắn: \"Hãy Lên  <span class='highlight'>NBTUNG.SHOP</span> Ủng Hộ !\"",
             ],
             
-            // ═══════════════════════════════════════════════════════════════════
-            // 🎈 EMOJI NỔI - Animation background
-            // ═══════════════════════════════════════════════════════════════════
+            // 🎈 EMOJI NỔI
             floatingEmojis: ["🍜", "💰", "🎮", "☕", "🍕", "💻", "🎵", "🌙", "⭐", "💵"],
             
-            // ═══════════════════════════════════════════════════════════════════
             // 💰 CÁC MỨC DONATE
-            // ═══════════════════════════════════════════════════════════════════
             donationOptions: [
                 {
                     amount: 10000,
@@ -831,7 +821,7 @@
                     emoji: "🍜",
                     description: "Bát Phở Đặc Biệt",
                     momoLink: "https://me.momo.vn/tungwiboo/",
-                    isDefault: true  // Mức mặc định được chọn sẵn
+                    isDefault: true
                 },
                 {
                     amount: 100000,
@@ -853,48 +843,27 @@
                 }
             ],
             
-            // Link MoMo mặc định (khi không tìm thấy amount phù hợp)
             momoFallback: "https://me.momo.vn/tungwiboo/",
             
-            // ═══════════════════════════════════════════════════════════════════
             // 🎉 DANH SÁCH NGƯỜI ĐÃ DONATE
-            // ═══════════════════════════════════════════════════════════════════
-            // Thêm người donate mới theo format bên dưới
-            // Để mảng rỗng [] nếu chưa có ai donate
-            recentDonations: [
-                // Ví dụ (bỏ comment // để sử dụng):
-                // {
-                //     avatar: "😇",                           // Emoji avatar
-                //     name: "Anonymous Developer",            // Tên người donate
-                //     message: "Đồng cảm với dev đồng nghiệp! 💪",  // Lời nhắn
-                //     amount: 100000,                         // Số tiền (không có dấu phẩy)
-                //     time: "2025-12-10 08:30:00"            // Thời gian (YYYY-MM-DD HH:MM:SS)
-                // },
-            ],
+            recentDonations: [],
             
-            // ═══════════════════════════════════════════════════════════════════
-            // 📝 FOOTER - PHẦN CUỐI TRANG
-            // ═══════════════════════════════════════════════════════════════════
-            footerText: "Nếu bạn thấy vui,<a href="https://nbtung.shop/">Bấm vào đây</a> để ủng hộ
-            !",
+            // 📝 FOOTER (ĐÃ SỬA LỖI)
+            // Đã thay đổi dấu ngoặc kép bao quanh thành dấu ngoặc đơn '...' để không trùng với href="..."
+            footerText: 'Nếu bạn thấy vui, <a href="https://nbtung.shop/">Bấm vào đây</a> để ủng hộ!',
+            
             disclaimer: `
                 ⚠️ Đây là trang web khều donate.<br>
                 Mọi donate đều được sử dụng để mua phở và cà phê (thật sự) 🍜 ☕
             `,
             
-            // ═══════════════════════════════════════════════════════════════════
-            // 🎨 TÙY CHỈNH GIAO DIỆN (Nâng cao - không bắt buộc)
-            // ═══════════════════════════════════════════════════════════════════
+            // 🎨 TÙY CHỈNH GIAO DIỆN
             sectionTitleDonate: "💝 Nuôi Tôi Ngay!",
             sectionTitleDonors: "🎉 Những người tốt bụng",
-            donateButtonText: "Nuôi Tôi",           // Text nút donate (sẽ thêm số tiền tự động)
+            donateButtonText: "Nuôi Tôi",
             emptyDonationTitle: "Chưa có ai nuôi tôi...",
             emptyDonationQuote: '"Một đồng cũng là tình thương, hai đồng cũng là yêu mến" 💝',
         };
-        
-        // ═══════════════════════════════════════════════════════════════════════════
-        // ⚠️ KHÔNG CẦN SỬA CODE BÊN DƯỚI (trừ khi bạn biết mình đang làm gì)
-        // ═══════════════════════════════════════════════════════════════════════════
 
         // ═══════════════════════════════════════════════════════════════════════════
         // ⚠️ KHÔNG CẦN SỬA CODE BÊN DƯỚI (trừ khi bạn biết mình đang làm gì)
